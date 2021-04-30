@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="40dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/namaview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"/>
+
+    <EditText
+        android:id="@+id/namatxt"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/namaview"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/emailview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        android:text="Email"
+        android:layout_below="@id/namaview"/>
+    <EditText
+        android:id="@+id/emailtxt"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_below="@id/namatxt"
+        android:layout_toEndOf="@id/emailview"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/phoneview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        android:text="Phone"
+        android:layout_below="@id/emailview"/>
+    <EditText
+        android:id="@+id/phonetxt"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_below="@id/emailtxt"
+        android:layout_toEndOf="@id/emailview"
+        android:inputType="number"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/addressview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        android:text="Address"
+        android:layout_below="@id/phoneview"/>
+    <EditText
+        android:id="@+id/addresstxt"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_below="@id/phonetxt"
+        android:layout_toEndOf="@id/emailview"
+        android:layout_gravity="center" />
+    <Button
+        android:id="@+id/btnAddRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addresstxt"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:text="Add Record"/>
+
+    <TextView
+        android:id="@+id/allrecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/btnAddRecord"
+        android:textSize="16dp"
+        android:text="All Record"
+        android:layout_centerInParent="true"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/allrecord"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center" />
+    <TextView
+        android:id="@+id/noRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rv_data"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:text="No Record Available"/>
+
+</RelativeLayout>

@@ -1,4 +1,4 @@
 package com.plete.addrecord
 
-class fileNew {
+class filenew {
 }
